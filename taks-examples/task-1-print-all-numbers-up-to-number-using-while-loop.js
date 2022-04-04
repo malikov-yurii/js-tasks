@@ -9,7 +9,7 @@ function numbersPriorTo(num) {
     let i = 1;
     while (i <= num) {
         result = result + i;
-        i++;
+        i += 1;
     }
     return result;
 }

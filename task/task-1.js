@@ -1,11 +1,18 @@
 const utils = require("../utils");
 
 /*
-    Function numbersBetween(num1, num2) should return all numbers between num1 and num2
+    Function numbersBetween(numFrom, numTo) should return all numbers between num1 and num2
 */
 
-function numbersBetween(num) {
-    // TODO implement
+function numbersBetween(numFrom, numTo) {
+    let result = "";
+    let i = numFrom;
+    while (i <= numTo) {
+        result = result + i;
+        i += 1;
+    }
+
+     return result;
 }
 
 /********* Test cases ********************/
