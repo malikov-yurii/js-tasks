@@ -1,12 +1,13 @@
 let _ = require('underscore')
 
 function compare(actual, expected) {
-    let testResultLabel = _.isEqual(actual, expected) ? "Passed" : "Failed";
+    let isTestPassed = _.isEqual(actual, expected);
+    let testResultLabel = isTestPassed ? "Passed" : "FAILED";
 
-    console.log(`--------------------------------------`);
-    console.log(`Test ${testResultLabel}`);
-    console.log(` expected    : ${expected}`);
-    console.log(` actual      : ${actual}`);
+    console.info(`--------------------------------------`);
+    console.info(`Test ${testResultLabel}`);
+    console.info(` expected    : ${JSON.stringify(expected)}`);
+    console.info(` actual      : ${JSON.stringify(actual)}`);
 }
 
 module.exports = { compare };
