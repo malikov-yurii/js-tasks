@@ -6,6 +6,13 @@ const utils = require("../utils");
 */
 
 function getMinNumber(nums) {
+    let min = nums[0];
+    for (let i = 1; i < nums.length; i += 1) {
+        if (nums[i] < min) {
+            min = nums[i];
+        }
+    }
+    return min;
 
 }
 

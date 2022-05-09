@@ -5,7 +5,13 @@ const utils = require("../utils");
 */
 
 function moveMaxElementToTail(nums) {
-
+    for (let j = 0; j < nums.length - 1; j += 1) {
+        if (nums[j] > nums[j + 1]) {
+            const temp = nums[j];
+            nums[j] = nums[j + 1];
+            nums[j + 1] = temp;
+        }
+    }
 }
 
 /********* Test cases ********************/

@@ -6,6 +6,16 @@ const utils = require("../utils");
 */
 
 function sortFirstFourElementsAscending(nums) {
+    let numsToSort = 4;
+    for (let i = numsToSort - 1; i > 0; i -= 1) {
+        for (let j = 0; j < i; j += 1) {
+            if (nums[j] > nums[j + 1]) {
+                const tmp = nums[j];
+                nums[j] = nums[j + 1];
+                nums[j + 1] = tmp;
+            }
+        }
+    }
 }
 
 /********* Test cases ********************/

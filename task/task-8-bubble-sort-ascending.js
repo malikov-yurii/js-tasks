@@ -8,8 +8,30 @@ const utils = require("../utils");
 */
 
 function sortAscending(nums) {
-
+    for (let n = 0; n < nums.length; n += 1) {
+        for (let i = 0; i < nums.length - 1 - n; i += 1) {
+            if (nums[i] > nums[i + 1]) {
+                let temp = nums[i];
+                nums[i] = nums[i + 1];
+                nums[i + 1] = temp;
+            }
+        }
+    }
 }
+
+// Solution2 (by your example)
+function sortAscending(nums) {
+    for (let i = nums.length - 1; i > 0; i -= 1) {
+        for (let j = 0; j < i; j += 1) {
+            if (nums[j] > nums[j + 1]) {
+                let temp = nums[j];
+                nums[j] = nums[j + 1];
+                nums[j + 1] = temp;
+            }
+        }
+    }
+}
+
 
 /********* Test cases ********************/
 

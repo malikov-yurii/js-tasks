@@ -5,8 +5,13 @@ const utils = require("../utils");
 */
 
 function sortFirstTwoElementsAscending(nums) {
-
+    if (nums[0] > nums[1]) {
+        const tmp = nums[1];
+        nums[1] = nums[0];
+        nums[0] = tmp;
+    }
 }
+
 
 /********* Test cases ********************/
 

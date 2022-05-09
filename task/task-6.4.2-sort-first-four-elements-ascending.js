@@ -4,8 +4,45 @@ const utils = require("../utils");
     Function sortFirstFourElementsAscending(nums) should sort first three numbers in nums in ascending direction.
 */
 
+
 function sortFirstFourElementsAscending(nums) {
+    let tmp;
+    if (nums[0] > nums[1]) {
+        tmp = nums[0];
+        nums[0] = nums[1];
+        nums[1] = tmp;
+    }
+    if (nums[1] > nums[2]) {
+        tmp = nums[1];
+        nums[1] = nums[2];
+        nums[2] = tmp;
+    }
+
+    if (nums[2] > nums[3]) {
+        tmp = nums[2];
+        nums[2] = nums[3];
+        nums[3] = tmp;
+    }
+
+    if (nums[0] > nums[1]) {
+        tmp = nums[0];
+        nums[0] = nums[1];
+        nums[1] = tmp;
+    }
+
+    if (nums[1] > nums[2]) {
+        tmp = nums[1];
+        nums[1] = nums[2];
+        nums[2] = tmp;
+    }
+
+    if (nums[0] > nums[1]) {
+        tmp = nums[0];
+        nums[0] = nums[1];
+        nums[1] = tmp;
+    }
 }
+
 
 /********* Test cases ********************/
 

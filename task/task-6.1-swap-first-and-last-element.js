@@ -6,7 +6,12 @@ const utils = require("../utils");
 
 function swapFirstAndLastElements(nums) {
 
+    const tmp = nums[0];
+    let len = nums.length;
+    nums[0] = nums[len - 1];
+    nums[len - 1] = tmp;
 }
+
 
 /********* Test cases ********************/
 
