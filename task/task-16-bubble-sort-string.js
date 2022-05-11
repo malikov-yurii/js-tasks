@@ -8,7 +8,7 @@ const utils = require("../utils");
     "abcd"[2] > "abcd"[0]
 
     Hint 2. string is immutable so "abcd"[0] = 'z' takes no effect.
-    Thus, you need first to convert string to array, then sort array and then convert to array to string
+    Thus, you need first to convert string to array, then sort array and then convert sorted array to string
 */
 
 function sort(str) {
