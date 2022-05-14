@@ -5,6 +5,13 @@ const utils = require("../utils");
 */
 
 function charArrayToString(chars) {
+    let newString = '';
+
+    for (let i = 0; i < chars.length; i += 1) {
+        newString += chars[i];
+    }
+
+    return newString;
 
 }
 

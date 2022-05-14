@@ -1,17 +1,27 @@
 const utils = require("../utils");
 
-/*
-    Sort alphabetically all chars in a string using bubble sort.
-
-    Hint 1. Characters are comparable:
-    'a' < 'b'
-    "abcd"[2] > "abcd"[0]
-
-    Hint 2. string is immutable so "abcd"[0] = 'z' takes no effect.
-    Thus, you need first to convert string to array, then sort array and then convert sorted array to string
-*/
 
 function sort(str) {
+    let stringToArray = [];
+    for (let i = 0; i < str.length; i += 1) {
+        stringToArray.push(str[i]);
+    }
+
+    for (let i = 0; i < stringToArray.length; i += 1) {
+        for (let j = 0; j < stringToArray.length; j += 1) {
+            if (stringToArray[j] > stringToArray[j + 1]) {
+                let tmp = stringToArray[j];
+                stringToArray[j] = stringToArray[j + 1];
+                stringToArray[j + 1] = tmp;
+            }
+        }
+    }
+
+    let bubbleSort = '';
+    for (let i = 0; i < stringToArray.length; i += 1) {
+        bubbleSort += stringToArray[i];
+    }
+    return bubbleSort;
 
 }
 

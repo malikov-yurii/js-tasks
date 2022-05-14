@@ -4,9 +4,11 @@ const utils = require("../utils");
     Count number of 'AB' occurrences in a string.
 */
 
-function countAB(str) {
 
+function countAB(str) {
+    return str.split('AB').length - 1;
 }
+
 
 
 /********* Test cases ********************/

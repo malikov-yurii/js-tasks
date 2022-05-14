@@ -9,7 +9,12 @@ const utils = require("../utils");
 */
 
 function stringToCharArray(str) {
+ const result = [];
 
+    for (let i = 0; i < str.length; i += 1) {
+        result.push(str[i]);
+    }
+    return result;
 }
 
 

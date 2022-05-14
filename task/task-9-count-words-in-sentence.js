@@ -5,9 +5,17 @@ const utils = require("../utils");
 */
 
 function countWords(sentence) {
+    sentence = sentence.split(' ');
+    let wordsSum = sentence.length;
 
+    return wordsSum;
 }
 
+// or shorter way to solve
+
+function countWords(sentence) {
+    return sentence.split(' ').length;
+}
 
 /********* Test cases ********************/
 utils.compare(countWords("Hello world"), 2);

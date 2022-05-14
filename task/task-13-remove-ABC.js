@@ -6,6 +6,21 @@ const utils = require("../utils");
 
 function removeABC(str) {
 
+    return str.replaceAll('ABC', '');
+}
+
+// Another, but not correctly (according to your test-cases) working solution ( I need an explanation, please)
+
+function removeABC(str) {
+    for (let i = 0; i < str.length; i += 1) {
+
+        if (str[i] === 'A' || str[i] === 'B' || str[i] === 'C'  ) {
+
+            str = str.substring(0, i) + str.substring(i + 1);
+            i -= 1;
+        }
+    }
+    return str;
 }
 
 
