@@ -12,12 +12,11 @@ function removeABC(str) {
 // Another, but not correctly (according to your test-cases) working solution ( I need an explanation, please)
 
 function removeABC(str) {
-    for (let i = 0; i < str.length; i += 1) {
-
-        if (str[i] === 'A' || str[i] === 'B' || str[i] === 'C'  ) {
-
-            str = str.substring(0, i) + str.substring(i + 1);
-            i -= 1;
+    for (let i = 0; i < str.length - 2;) {
+        if (str[i] === 'A' && str[i + 1] === 'B' && str[i + 2] === 'C') {
+            str = str.substring(0, i) + str.substring(i + 3);
+        } else {
+            i += 1;
         }
     }
     return str;
