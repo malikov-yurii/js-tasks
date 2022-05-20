@@ -1,7 +1,15 @@
 const utils = require("../utils");
 
 function doubleLetterInString(ch, str) {
+    let correctedString = '';
+    for  ( const letter of str) {
+        if ( letter === ch) {
+            correctedString += letter;
+        }
+        correctedString += letter;
+    }
 
+    return correctedString;
 }
 
 

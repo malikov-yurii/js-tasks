@@ -1,8 +1,30 @@
 const utils = require("../utils");
 
 function sumDigits(number) {
-
+    let sum = 0;
+    while (number) {
+        let digit = number % 10;
+        sum += digit;
+        number = (number - digit) / 10;
+    }
+    return sum;
 }
+
+// Second solution
+
+function sumDigits(number) {
+    let sum = 0;
+
+    while (number) {
+        sum += number % 10;
+        number = Math.floor(number / 10);
+    }
+
+    return sum;
+}
+
+
+
 
 
 /********* Test cases ********************/

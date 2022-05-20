@@ -8,7 +8,7 @@ function sort(str) {
     }
 
     for (let i = 0; i < stringToArray.length; i += 1) {
-        for (let j = 0; j < stringToArray.length; j += 1) {
+        for (let j = 0; j < stringToArray.length  - i; j += 1) {
             if (stringToArray[j] > stringToArray[j + 1]) {
                 let tmp = stringToArray[j];
                 stringToArray[j] = stringToArray[j + 1];
