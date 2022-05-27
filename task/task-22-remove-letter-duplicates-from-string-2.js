@@ -3,6 +3,14 @@ const utils = require("../utils");
 /* Leave only the first occurrence of letter in string */
 
 function removeLetterDuplicates2(str) {
+    let newString = '';
+    for (const letter of str) {
+        if (newString.includes(letter) && 'a' <= letter && letter <= 'z') {
+            continue;
+        }
+        newString += letter;
+    }
+    return newString;
 
 }
 

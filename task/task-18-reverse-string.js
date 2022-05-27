@@ -15,23 +15,6 @@ function reverse(str) {
     return newString;
 }
 
-// Third Solution
-
-function reverse(str) {
-    let strArr = str.split('');
-    let start = 0;
-    let end = str.length - 1;
-    while (start <= end) {
-        const temp = strArr[start];
-        strArr[start] = strArr[end];
-        strArr[end] = temp;
-        start += 1;
-        end -= 1;
-    }
-    return strArr.join('');
-
-}
-
 
 /********* Test cases ********************/
 utils.compare(reverse("ab"), 'ba');
