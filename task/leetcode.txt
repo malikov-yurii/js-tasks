@@ -1,3 +1,29 @@
 Task 2124 https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/
 Task 1108 https://leetcode.com/problems/defanging-an-ip-address/
 Task 2011 https://leetcode.com/problems/final-value-of-variable-after-performing-operations/
+
+// Arrays
+Task 1929 https://leetcode.com/problems/concatenation-of-array/
+Task 1480 https://leetcode.com/problems/running-sum-of-1d-array/
+Task 1672 https://leetcode.com/problems/richest-customer-wealth/
+Task 1470 https://leetcode.com/problems/shuffle-the-array/
+Task 1512 https://leetcode.com/problems/number-of-good-pairs/
+Task 1431 https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
+Task 1365 https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/
+
+//Strings
+Task 771 https://leetcode.com/problems/jewels-and-stones/
+Task 1678 https://leetcode.com/problems/goal-parser-interpretation/
+Task 1528 https://leetcode.com/problems/shuffle-string/
+Task 2194 https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/
+Task 1859 https://leetcode.com/problems/sorting-the-sentence/
+Task 1221 https://leetcode.com/problems/split-a-string-in-balanced-strings/
+Task 1773 https://leetcode.com/problems/count-items-matching-a-rule/
+Task 1662 https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/
+Task 1684 https://leetcode.com/problems/count-the-number-of-consistent-strings/
+Task 2103 https://leetcode.com/problems/rings-and-rods/
+Task 1832 https://leetcode.com/problems/check-if-the-sentence-is-pangram/
+Task 1816 https://leetcode.com/problems/truncate-sentence/
+Task 804 https://leetcode.com/problems/unique-morse-code-words/
+
+
