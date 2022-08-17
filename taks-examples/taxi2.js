@@ -1,4 +1,5 @@
-const utils = require("../utils");
+
+
 
 class Person {
     #name;
@@ -30,43 +31,52 @@ class Person {
         return this.#money;
     }
 
-    earnMoney(bonusSalary) {
-        this.#money += bonusSalary;
+    earnMoney(salary) {
+        this.#money += salary;
     }
 
-    receiveSalary(){
-        this.#money += this.#salary;
+    payMoney(moneyAmount){
+        this.#money -= moneyAmount;
     }
 
 }
 
-const nataliia = new Person("Nataliia", 27, 0)
-const yurii = new Person( "Yurii", 34,0)
+const nataliia = new Person("Nataliia", 27, 100)
+const yurii = new Person( "Yurii", 34,450)
+const denis = new Person("Denis", 29, 100)
+const anastasiia = new Person( "Anastasiia", 25,100)
 
-yurii.earnMoney(100);
-yurii.earnMoney(50);
 
-// Manager set for Yurii 10 000 as monthlySalary
-yurii.salary = 10000;
-yurii.receiveSalary()
-yurii.salary = 50;
-yurii.receiveSalary()
+class Taxi {
+    taxiName;
+    fare;
+    maxSits;
+    freeSits;
+
+
+    constructor(taxiName, fare, maxSits, freeSits,) {
+        this.taxiName = taxiName;
+        this.fare = 50;
+        this.maxSits = maxSits;
+        this.freeSits = [];
+    }
+
+    takePassenger(person) {
+        person.payMoney(this.fare);
+        this.freeSits.push(person);
+        let isSuccess = false;
+        if( this.freeSits.length <= this.maxSits ){
+            isSuccess = true;
+        }
+        return isSuccess;
+    }
+
+}
+
+const lux = new Taxi("Lux", 0, 3, 3)
+lux.takePassenger(yurii);
 
 console.log("yurii_money=" + yurii.money);
-console.log("yurii_salary=" + yurii.salary);
-console.log("persons=" + Person.createdPersonCount);
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

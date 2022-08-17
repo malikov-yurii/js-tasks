@@ -1,27 +1,35 @@
 const utils = require("../utils");
 
-/*
-    Function numbersBetween(numFrom, numTo) should return all numbers between num1 and num2
-*/
 
-function numbersBetween(numFrom, numTo) {
-    let result = "";
-    let i = numFrom;
-    while (i <= numTo) {
-        result = result + i;
-        i += 1;
-    }
-
-     return result;
+function isValidEmailString(emailStr) {
+    const isValid = emailStr !== undefined && emailStr.includes('@');
+    return isValid;
 }
 
-/********* Test cases ********************/
+function isValidEmailStringSecondVersion(emailStr) {
+    const isValid = emailStr !== undefined && emailStr.includes('@') && emailStr.endsWith('.com');
+    return isValid;
+}
 
-let testResult = numbersBetween(2,4);
-utils.compare(testResult, "234");
+const firstUser = {
+    name : 'Yurii',
+    email : 'yurii @'
+}
 
-testResult = numbersBetween(0, 3);
-utils.compare(testResult, "0123");
+let name = 'Natali';
+let email = 'natali@gmail.com';
+const secondUser = { name, email };
 
-testResult = numbersBetween(-1, 2);
-utils.compare(testResult, "-1012");
+function isValidUser({ name, email }, emailValidator) {
+    return emailValidator(email);
+}
+
+// function isValidUser(user, emailValidator) {
+//     return emailValidator(user.email);
+// }
+
+utils.compare(isValidUser(firstUser, isValidEmailString), true);
+utils.compare(isValidUser(firstUser, isValidEmailStringSecondVersion), false);
+
+utils.compare(isValidUser(secondUser, isValidEmailString), true);
+utils.compare(isValidUser(secondUser, isValidEmailStringSecondVersion), true);

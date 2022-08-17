@@ -1,4 +1,4 @@
-export class Person {
+export class  Person {
     #name;
     #age;
     #money;
@@ -37,3 +37,4 @@ export class Person {
     }
 
 }
+export

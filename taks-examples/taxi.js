@@ -1,17 +1,60 @@
-function countProps(object) {
-    let propCount = 0;
-    // Change code below this line
-    for (const key in object) {
-        if (object.hasOwnProperty(key)){
+const utils = require("../utils");
 
-            propCount += 1;
+class Person {
+    #name;
+    #age;
+    #money;
+    #salary;
 
-        }
+    static createdPersonCount = 0;
+
+    constructor(name, age, money, salary) {
+        this.#name = name;
+        this.#age = age;
+        this.#money = money;
+        this.#salary = salary;
+
+        Person.createdPersonCount++;
+
     }
-    // Change code above this line
-    return propCount;
+
+    set salary(salaryToGet) {
+        this.#salary = salaryToGet;
+    }
+
+    get salary() {
+        return this.#salary;
+    }
+
+    get money(){
+        return this.#money;
+    }
+
+    earnMoney(bonusSalary) {
+        this.#money += bonusSalary;
+    }
+
+    receiveSalary(){
+        this.#money += this.#salary;
+    }
+
 }
-countProps({ name: "Mango", age: 2 })
+
+const nataliia = new Person("Nataliia", 27, 0)
+const yurii = new Person( "Yurii", 34,0)
+
+yurii.earnMoney(100);
+yurii.earnMoney(50);
+
+// Manager set for Yurii 10 000 as monthlySalary
+yurii.salary = 10000;
+yurii.receiveSalary()
+yurii.salary = 50;
+yurii.receiveSalary()
+
+console.log("yurii_money=" + yurii.money);
+console.log("yurii_salary=" + yurii.salary);
+console.log("persons=" + Person.createdPersonCount);
 
 
 
@@ -19,15 +62,12 @@ countProps({ name: "Mango", age: 2 })
 
 
 
-function swapElements(nums) {
-    const tmp = nums[0];
-    nums[0] = nums[1];
-    nums[1] = tmp;
-}
 
-function swapLastTwoElements(nums) {
-    const len = nums.length;
-    const tmp = nums[len - 1];
-    nums[len - 1] = nums[len - 2];
-    nums[len - 2] = tmp;
-}
+
+
+
+
+
+
+
+

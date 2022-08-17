@@ -1,5 +1,5 @@
 import {Person} from './person.class.js';
-import {Taxi} from './class.js';
+import {Taxi} from './taxi.class.js';
 
 const yurii = new Person("Yurii", 34, 500)
 const nataliia = new Person("Nataliia", 27, 400)
