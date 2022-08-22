@@ -5,7 +5,7 @@ const utils = require("../utils");
 */
 
 function countWords(sentences) {
-    wordsSum = [];
+    let wordsSum = [];
     for (let i = 0; i < sentences.length; i += 1) {
         let sentence = sentences[i].split(' ');
         wordsSum.push(sentence.length);
